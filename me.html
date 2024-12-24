@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avinash Services</title>
+    <style>
+        .me, .projects, .services, .contact {
+            display: none;
+        }
+        img {
+            height: 300px;
+            width: 300px;
+        }
+        h1 {
+            font-size: 20px;
+        }
+        #but2, #but3, #but4{
+            display: none;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1 id="welcome"></h1> <!-- Placeholder for welcome text -->
+
+    <div class="me">
+        <a href="https://ibb.co/0yrkdtr">
+            <img src="https://i.ibb.co/60F2fBF/My-photo.jpg" alt="My-photo" border="0" id="me">
+        </a>
+        <h1>Hi, I am Avinash K. I am a full-stack developer and machine learning engineer.</h1>
+        <h1>I create and develop responsive and user-friendly websites for clients as a freelancer.</h1>
+        <h1>Currently, I am working as a machine learning engineer at VCODEZ INNOVATING IDEAS.</h1>
+    </div>
+
+    <div class="projects">
+        <h2>MY PROJECTS:</h2>
+        <details>
+            <p><h3>EVENT PLANNING:</h3> A website for event planning organizations.</p>
+            <p><h3>SHOE PARK:</h3> An E-commerce landing site for a shoe shop showcasing its features.</p>
+            <p><h3>PIZZARUN:</h3> A pizza delivery web application.</p>
+        </details>
+    </div>
+
+    <div class="services">
+        <h2>MY SERVICES:</h2>
+        <details>
+            <ol style="list-style-type: upper-alpha;">
+                <li>PORTFOLIO CREATION</li>
+                <li>E-COMMERCE LANDING PAGE</li>
+                <li>ALL FRONTEND WORKS FOR WEBSITE</li>
+                <li>BACKEND (SOON)</li>
+                <li>CONTENT WRITING</li>
+            </ol>
+        </details>
+    </div>
+
+    <div class="contact">
+        <h2>CONTACT DETAILS:</h2>
+        <details>
+            <ul style="list-style-type: circle;">
+                <li>PHONE NO: 9360409120</li>
+                <li>EMAIL ID: <a href="mailto:avinashmani2003@gmail.com">avinashmani2003@gmail.com</a></li>
+            </ul>
+        </details>
+    </div>
+
+    <button id="but">CLICK HERE!</button>
+    <button id="but2"> MY PROJECTS</button>
+    <button id="but3">MY SERVICES</button>
+    <button id="but4">CONTACT</button>
+
+    <script>
+        var button = document.getElementById('but');
+        var div = document.getElementsByClassName('me')[0];
+        var welcome = document.getElementById('welcome');
+        var button2v = document.getElementById('but2');
+        var projects = document.getElementsByClassName('projects')[0];
+        var button3 = document.getElementById('but3');
+        var services = document.getElementsByClassName('services')[0];
+        var button4 = document.getElementById('but4');
+        var contact = document.getElementsByClassName('contact')[0];
+
+        button.addEventListener('click', () => {
+            welcome.innerText = "WELCOME TO MY WEBSITE"; // Display welcome message
+            button.style.display = 'none'; // Hide the button
+            
+           
+            setTimeout(() => {
+                div.style.display = 'block'; // Show the .me div
+                button2v.style.display = 'block';
+            }, 2000);
+
+           
+        });
+        
+        button2v.addEventListener('click', () => {
+            setTimeout(() => {
+                    projects.style.display = 'block'; // display projects
+                    button2v.style.display = 'none'; // dissappear projects button
+                    button3.style.display = 'block'; // display sevices button
+                }, 3000);
+            });
+
+            button3.addEventListener('click', () => {
+             setTimeout(() => {
+                services.style.display = 'block'; //display services
+                button3.style.display = 'none'; //dissappear services button
+                button4.style.display = 'block' // display contact button
+            }, 3000);
+        });
+            button4.addEventListener('click', () => {
+                setTimeout(() => {
+                    contact.style.display = 'block'; //display contact
+                    button4.style.display = 'none'; //dissappear contact button
+                }, 3000);
+            })
+    </script>
+</body>
+</html>
