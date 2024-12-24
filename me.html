@@ -5,68 +5,199 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Avinash Services</title>
     <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif; /* Changed font style */
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            color: #333;
+            text-align: center;
+        }
+
+        h1, h2 {
+            margin: 10px 0;
+        }
+
+        img {
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+            border: 5px solid #fff;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .content {
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 600px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: white;
+            background: #0078d7;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background: #005bb5;
+            transform: scale(1.2);
+        }
+
+        /* Sections */
         .me, .projects, .services, .contact {
             display: none;
+            margin-top: 20px;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            padding: 20px;
+            border-radius: 10px;
         }
-        img {
-            height: 300px;
-            width: 300px;
+
+        /* Background colors for each section */
+        .me {
+            background-color: skyblue; /* Light blue */
         }
-        h1 {
-            font-size: 20px;
+
+        .projects {
+            background-color: lightgreen; /* Lavender blush */
         }
+
+        .services {
+            background-color: lightgrey/* Light green */
+        }
+
+        .contact {
+            background-color: lightyellow /* Lemon chiffon */
+        }
+
+        .me.show, .projects.show, .services.show, .contact.show {
+            opacity: 50;
+            display: block;
+        }
+
+        .projects details,
+        .services details,
+        .contact details {
+            text-align: left;
+            margin-top: 10px;
+        }
+
+        .projects h3,
+        .services li,
+        .contact li {
+            margin: 5px 0;
+        }
+
+        #welcome {
+            font-size: 28px;
+            font-weight: bold;
+            color: #fff;
+            margin: 20px 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            img {
+                height: 150px;
+                width: 150px;
+            }
+
+            button {
+                width: 80%;
+                font-size: 14px;
+            }
+
+            .content {
+                padding: 15px;
+            }
+
+            #welcome {
+                font-size: 24px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            img {
+                height: 120px;
+                width: 120px;
+            }
+
+            button {
+                width: 90%;
+                font-size: 12px;
+            }
+
+            .content {
+                padding: 10px;
+            }
+
+            #welcome {
+                font-size: 20px;
+            }
+        }
+
         #but2, #but3, #but4{
             display: none;
         }
-        
     </style>
 </head>
 <body>
     <h1 id="welcome"></h1> <!-- Placeholder for welcome text -->
 
-    <div class="me">
-        <a href="https://ibb.co/0yrkdtr">
-            <img src="https://i.ibb.co/60F2fBF/My-photo.jpg" alt="My-photo" border="0" id="me">
-        </a>
-        <h1>Hi, I am Avinash K. I am a full-stack developer and machine learning engineer.</h1>
-        <h1>I create and develop responsive and user-friendly websites for clients as a freelancer.</h1>
-        <h1>Currently, I am working as a machine learning engineer at VCODEZ INNOVATING IDEAS.</h1>
-    </div>
+    <div class="content">
+        <div class="me">
+            <a href="https://ibb.co/0yrkdtr">
+                <img src="https://i.ibb.co/60F2fBF/My-photo.jpg" alt="My-photo" id="me">
+            </a>
+            <h1>Hi, I am Avinash K. I am a full-stack developer and machine learning engineer.</h1>
+            <h1>I create and develop responsive and user-friendly websites for clients as a freelancer.</h1>
+            <h1>Currently, I am working as a machine learning engineer at VCODEZ INNOVATING IDEAS.</h1>
+        </div>
 
-    <div class="projects">
-        <h2>MY PROJECTS:</h2>
-        <details>
-            <p><h3>EVENT PLANNING:</h3> A website for event planning organizations.</p>
-            <p><h3>SHOE PARK:</h3> An E-commerce landing site for a shoe shop showcasing its features.</p>
-            <p><h3>PIZZARUN:</h3> A pizza delivery web application.</p>
-        </details>
-    </div>
+        <div class="projects">
+            <h2>MY PROJECTS:</h2>
+            <details>
+                <p><h3>EVENT PLANNING:</h3> A website for event planning organizations.</p>
+                <p><h3>SHOE PARK:</h3> An E-commerce landing site for a shoe shop showcasing its features.</p>
+                <p><h3>PIZZARUN:</h3> A pizza delivery web application.</p>
+            </details>
+        </div>
 
-    <div class="services">
-        <h2>MY SERVICES:</h2>
-        <details>
-            <ol style="list-style-type: upper-alpha;">
-                <li>PORTFOLIO CREATION</li>
-                <li>E-COMMERCE LANDING PAGE</li>
-                <li>ALL FRONTEND WORKS FOR WEBSITE</li>
-                <li>BACKEND (SOON)</li>
-                <li>CONTENT WRITING</li>
-            </ol>
-        </details>
-    </div>
+        <div class="services">
+            <h2>MY SERVICES:</h2>
+            <details>
+                <ol style="list-style-type: upper-alpha;">
+                    <li>PORTFOLIO CREATION</li>
+                    <li>E-COMMERCE LANDING PAGE</li>
+                    <li>ALL FRONTEND WORKS FOR WEBSITE</li>
+                    <li>BACKEND (SOON)</li>
+                    <li>CONTENT WRITING</li>
+                </ol>
+            </details>
+        </div>
 
-    <div class="contact">
-        <h2>CONTACT DETAILS:</h2>
-        <details>
-            <ul style="list-style-type: circle;">
-                <li>PHONE NO: 9360409120</li>
-                <li>EMAIL ID: <a href="mailto:avinashmani2003@gmail.com">avinashmani2003@gmail.com</a></li>
-            </ul>
-        </details>
+        <div class="contact">
+            <h2>CONTACT DETAILS:</h2>
+            <details>
+                <ul style="list-style-type: circle;">
+                    <li>PHONE NO: 9360409120</li>
+                    <li>EMAIL ID: <a href="mailto:avinashmani2003@gmail.com">avinashmani2003@gmail.com</a></li>
+                </ul>
+            </details>
+        </div>
     </div>
 
     <button id="but">CLICK HERE!</button>
-    <button id="but2"> MY PROJECTS</button>
+    <button id="but2">MY PROJECTS</button>
     <button id="but3">MY SERVICES</button>
     <button id="but4">CONTACT</button>
 
@@ -82,39 +213,36 @@
         var contact = document.getElementsByClassName('contact')[0];
 
         button.addEventListener('click', () => {
-            welcome.innerText = "WELCOME TO MY WEBSITE"; // Display welcome message
-            button.style.display = 'none'; // Hide the button
-            
-           
+            welcome.innerText = "WELCOME TO AVINASH's SERVICES!";
+            button.style.display = 'none';
             setTimeout(() => {
-                div.style.display = 'block'; // Show the .me div
+                div.classList.add('show'); // Show the .me div with fade-in effect
                 button2v.style.display = 'block';
             }, 2000);
-
-           
         });
-        
+
         button2v.addEventListener('click', () => {
             setTimeout(() => {
-                    projects.style.display = 'block'; // display projects
-                    button2v.style.display = 'none'; // dissappear projects button
-                    button3.style.display = 'block'; // display sevices button
-                }, 3000);
-            });
-
-            button3.addEventListener('click', () => {
-             setTimeout(() => {
-                services.style.display = 'block'; //display services
-                button3.style.display = 'none'; //dissappear services button
-                button4.style.display = 'block' // display contact button
-            }, 3000);
+                projects.classList.add('show'); // Show projects with fade-in effect
+                button2v.style.display = 'none';
+                button3.style.display = 'block';
+            }, 2000);
         });
-            button4.addEventListener('click', () => {
-                setTimeout(() => {
-                    contact.style.display = 'block'; //display contact
-                    button4.style.display = 'none'; //dissappear contact button
-                }, 3000);
-            })
+
+        button3.addEventListener('click', () => {
+            setTimeout(() => {
+                services.classList.add('show'); // Show services with fade-in effect
+                button3.style.display = 'none';
+                button4.style.display = 'block';
+            }, 2000);
+        });
+
+        button4.addEventListener('click', () => {
+            setTimeout(() => {
+                contact.classList.add('show'); // Show contact with fade-in effect
+                button4.style.display = 'none';
+            }, 2000);
+        });
     </script>
 </body>
 </html>
